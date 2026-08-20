@@ -29,14 +29,14 @@ function Home() {
 
     fetchProducts();
 
-  }, []) 
+  }, []) // site eka load weddi eka parak witrak product load wena useEffect eka wada karanna tmai [] warahan danne
 
   // Loading Screen 
   if (loading) {
     return (
       <div className="flex justify-center items-center h-64">
         <p className="text-xl font-semibold text-blue-600 animate-pulse">
-          Products Loading...
+          Products Loading..
         </p>
       </div>
     )
@@ -58,12 +58,12 @@ function Home() {
         Latest Products
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} /> //props
+        {products.map((product) => ( 
+          <ProductCard key={product.id} productprop={product} /> //props
         ))}
       </div>
     </div>
   )
 }
 
-export default Home
+export default Home 
